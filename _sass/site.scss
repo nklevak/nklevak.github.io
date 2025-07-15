@@ -82,8 +82,8 @@ body.page-about .header::before {
     align-items: center;
 }
 .container {
-    width: 100%;
-    max-width: 600px;
+    width: 90%;         // Fluid width for all screens
+    max-width: 45em;    // Or 600px, or whatever you prefer
     padding-right: 30px;
     padding-left: 30px;
     @include center-block();
@@ -122,9 +122,9 @@ body.page-about .header::before {
     }
 }
 .wrapper {
-    width: 75%;
-    max-width: 900px;
-    margin: 8rem auto;
+    width: 90%;
+    max-width: 45em;
+    margin: 6em auto; // vertical spacing also in em
     background: $white;
     color: $color_tuatara;
     padding: 2em;
@@ -259,4 +259,12 @@ header .entry-meta {
   margin-top: 1em;
   margin-bottom: 1em;
   font-weight: normal;
+}
+.content {
+    padding-bottom: 0 !important;
+    margin-bottom: 1em !important;
+  }
+.wrapper {
+    padding-bottom: 1em !important;
+    margin-bottom: 0 !important;
 }
