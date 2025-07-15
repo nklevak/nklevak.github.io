@@ -47,6 +47,14 @@ body {
         display: block !important;
     }
 }
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255,255,255,0.5); // white overlay, 0.5 = 50% opacity
+  z-index: 0;
+  pointer-events: none;
+}
 .flex {
     display: -webkit-box;
     display: -webkit-flex;
@@ -229,4 +237,19 @@ header .entry-meta {
         background-blend-mode: multiply;
         background-position: center center;
     }
+}
+.header .content {
+  font-size: 1.1em;
+}
+.bio-link {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: normal;
+}
+.bio-link:hover {
+  text-decoration: underline;
+}
+.bio {
+  font-weight: normal;
 }

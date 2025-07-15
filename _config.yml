@@ -5,7 +5,7 @@ description: "Nastasia Klevak's personal website -- Stanford Psychology"
 reading_time: true
 words_per_minute: 200
 logo: "assets/img/headshot.png"
-background: "assets/img/pastels.png"
+background: "assets/img/abstract-bluish-paint-background-wallpaper.jpg"
 tiled_bg: false # Set this true if you want to tile your background image, otherwise it will be covered
 locale: en_US
 url: https://nklevak.github.io

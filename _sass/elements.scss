@@ -164,8 +164,8 @@ img {
 .img-circle {
     border-radius: 50%;
     border: 3px solid $white;
-    height: 150px;
-    width: 150px;
+    height: 200px;
+    width: 200px;
     object-fit: cover;
     object-position: center;
 }
@@ -254,4 +254,8 @@ kbd {
     text-align: center;
     font-weight: 300;
     margin-bottom: 10px;
+}
+
+.header .content {
+  font-size: 1.1em;
 }

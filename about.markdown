@@ -6,9 +6,7 @@ date: 2025-07-14
 comments: false
 ---
 
-<center>><b>Hi!</b></center>
-
-## About me
+## Hi!
 
 I am a second year graduate student in the neuroscience area of the Stanford Psychology department. I'm interested in the various factors that impact our learning and focus over time, and am currently working on projects related to cognitive fatigue and effort, task switching, and learning. Previously, I received a B.S.E. degree in Computer Science from Princeton University, with certificates in Cognitive Science and Linguistics. There, and for a year afterwards, I worked in the Niv Lab as a lab manager and research assistant.
 
