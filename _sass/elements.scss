@@ -23,7 +23,7 @@
     @extend %btnextend;
 }
 .btn {
-    padding: 10px 13px;
+    padding: 10px 15px 2px 15px;
     @include font-rem(14);
     margin: 1px auto;
     @extend %btnextend;
@@ -80,7 +80,7 @@
   color: $white !important;
   background: $purple;
 }
-.btn:active, .zoombtn:active {
+.btn:active {
     transform: scale(0.97);
   }
 .title .btn {
@@ -93,6 +93,28 @@
         @include font-rem(14);
     }
 }
+.btn {
+    border: none;
+    background: none;
+    padding: 6px 10px;
+    font-size: 1.1em;
+    font-weight: 600;
+    margin: 0;
+    position: relative;
+  }
+  
+  .btn:not(:last-child)::after {
+    content: "|";
+    color: $purple; 
+    margin: 0 1em;
+    font-weight: 400;
+    font-size: 1.1em;
+    position: absolute;
+    right: -1.7em;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
 
 // hr break
 hr {
@@ -270,4 +292,16 @@ kbd {
 .social-btn:hover, .social-btn:hover i {
   color: $purple !important;
   border-color: $purple;
+}
+
+.btn-home {
+  background: $purple !important;
+  color: #fff !important;
+  border: none !important;
+  font-size: 1.2em;
+  font-weight: 450;
+}
+.btn-home:hover, .btn-home:active {
+  background: darken($purple, 10%) !important;
+  color: #fff !important;
 }

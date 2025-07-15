@@ -51,7 +51,7 @@ body {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0);
   z-index: 0;
   pointer-events: none;
 }
@@ -88,7 +88,7 @@ body.page-about .header::before {
     padding-left: 30px;
     @include center-block();
     // background: linear-gradient(to right,rgb(128, 110, 142),white);	
-	background-color: $white;
+	background-color: rgba(255, 255, 255, 0.85); // Changed from $white to semi-transparent
     color: $color_shark;
     z-index: 1;
     display: flex;
@@ -125,7 +125,7 @@ body.page-about .header::before {
     width: 90%;
     max-width: 45em;
     margin: 6em auto; // vertical spacing also in em
-    background: $white;
+    background: rgba(255, 255, 255, 0.7);
     color: $color_tuatara;
     padding: 2em;
     border-radius: 3px;
