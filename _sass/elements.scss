@@ -23,7 +23,7 @@
     @extend %btnextend;
 }
 .btn {
-    padding: 10px 18px;
+    padding: 10px 13px;
     @include font-rem(14);
     margin: 1px auto;
     @extend %btnextend;
@@ -80,10 +80,13 @@
   color: $white !important;
   background: $purple;
 }
+.btn:active, .zoombtn:active {
+    transform: scale(0.97);
+  }
 .title .btn {
     margin: 10px;
-    @include font-rem(16);
-    font-weight: 300;
+    @include font-rem(17);
+    font-weight: 390;
 }
 .post-list {
     .btn {
