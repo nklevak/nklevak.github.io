@@ -115,7 +115,7 @@ body.page-about .header::before {
     text-align: center;
     .title {
         margin-top: 20px;
-        margin-bottom: 25px;
+        margin-bottom: 0px;
     }
     @media #{$small} {
         padding: 0 1em;
@@ -256,5 +256,7 @@ header .entry-meta {
   text-decoration: underline;
 }
 .bio {
+  margin-top: 1em;
+  margin-bottom: 1em;
   font-weight: normal;
 }
