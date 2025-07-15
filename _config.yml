@@ -1,14 +1,14 @@
 # Site
-title: Moonrise
-bio: "Minimal, one column jekyll theme."
-description: "Moonrise is a fresh take on the classic Moon"
+title: Nastasia Klevak
+bio: "Psychology graduate student @ Stanford Psychology with a focus on cognitive fatigue, effort, and learning."
+description: "Nastasia Klevak's personal website -- Stanford Psychology"
 reading_time: true
 words_per_minute: 200
-logo: "assets/img/logo.png"
-background: "assets/img/moonrise-background.jpg"
+logo: "assets/img/headshot.png"
+background: "assets/img/pastels.png"
 tiled_bg: false # Set this true if you want to tile your background image, otherwise it will be covered
 locale: en_US
-url: https://TolgaTatli.github.io/Moonrise
+url: https://nklevak.github.io
 
 # Jekyll
 permalink: /:title/
@@ -37,19 +37,19 @@ sass:
 #ad-slot:
 #bing-verify:
 #email:
-twitter: username
-facebook: username
-github-url: username
+# twitter: username
+# facebook: username
+github-url: nklevak
 #stackoverflow: 123456/username   from a "http://stackoverflow.com/users/123456/username" link
-#linkedin: username
+linkedin: nastasia-klevak
 #xing: username
-instagram: username
+# instagram: username
 #lastfm: username
 #tumblr: username
 #medium: '@username'
 #pinterest: username
 #foursquare: username
-steam: username
+# steam: username
 #dribbble: username
 #youtube: username
 #youtube-channel: channel
@@ -63,16 +63,16 @@ steam: username
 
 # Plugins
 plugins:
-  - jekyll-mentions
   - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-gist
   - jekyll-seo-tag
-  - jekyll-paginate
-  - jekyll-include-cache
+  - jekyll-sitemap
+#   - jekyll-mentions
+#   - jekyll-gist
+#   - jekyll-paginate
+#   - jekyll-include-cache
 
-jekyll-mentions:
-  base_url: https://github.com
+# jekyll-mentions:
+#   base_url: https://github.com
 
 # Exclude list
 exclude:
