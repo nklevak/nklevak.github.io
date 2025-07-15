@@ -1,7 +1,26 @@
 ---
-layout: project
-title: All Projects
-excerpt: "A List of Projects"
-comments: false
+layout: page
+title: Projects :)
+permalink: /projects/
 ---
 
+### Ongoing Projects
+<details>
+  <summary><span style="font-size:0.8em;">&#9654;</span> <em>How does fatigue relate to effort? And how does task switching influence this?</em></summary>
+  The overarching goal of this project is to understand how cognitive fatigue relates to effort, and how switching between tasks may alter that relationship. So far, I have used an online behavioral task to analyze how self-selected rest times change depending on performance levels and task switches. Currently, I am developing a computational model based on this data to better understand the impact of task switches on the rejuvenating aspects of rest.
+</details>
+<details>
+  <summary><span style="font-size:0.8em;">&#9654;</span> <em>How are learning effects reflected in the brain?</em></summary>
+  This project aims to understand changes in brain activity when people get more and more experience with a specific task. Currently, I am using an fMRI dataset where subjects had numerous experiences with the same tasks to understand how the distribution of activated networks changes over time from practice.
+</details>
+
+
+### Previous relevant work
+<details>
+  <summary><span style="font-size:0.8em;">&#9654;</span> <em>Understanding and Simulating Language Conventions in Emerging Sign Language Communities</em></summary>
+  Advised by Professor Tom Griffiths as well as Bill Thompson and Robert Hawkins, this project was the result of a semester-long independent work research project at Princeton. We utilized, coded, and adapted multiple versions of a Hierarchical Bayesian Model to simulate language emergence in various population sizes. By testing models that accounted for partner-specific memory, this project then identified which model best matched with qualitative data about how emerging sign languages develop.
+</details>
+<details>
+  <summary><span style="font-size:0.8em;">&#9654;</span> <em>Investigating the Efficacy of CLIP’s Object Recognition on Photos Taken by the Visually Impaired</em></summary>
+  Advised by Professor Olga Russakovsky, this project was the result of a semester-long independent work research project during my undergraduate degree. I tested the CLIP image recognition system on a dataset of images taken by the Blind or Visually Impaired (the VizWiz-Captions dataset), to identify whether this novel image recognition system—not explicitly trained on images from sighted individuals—would be able to fulfill the needs of a large part of the population. In doing so, I developed a system to statistically evaluate CLIP’s accuracy on this dataset, and attempted to improve it’s accuracy by fine-tuning a neural network classifier and adding it to the testing pipeline. Finally qualitatively evaluated the dataset images CLIP was the best and the worst at recognizing, in order to pinpoint common traits of such images and identify CLIP’s pitfalls and areas for improvement.
+</details>
