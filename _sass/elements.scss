@@ -263,3 +263,8 @@ kbd {
 .header .content {
   font-size: 1.1em;
 }
+
+.social-btn:hover, .social-btn:hover i {
+  color: $purple !important;
+  border-color: $purple;
+}

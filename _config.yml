@@ -1,6 +1,6 @@
 # Site
 title: Nastasia Klevak
-bio: "Graduate student @ Stanford Psychology with a focus on cognitive fatigue, effort, and learning."
+bio: "Hi! I am a PhD student @ Stanford Psychology with a focus on cognitive fatigue, effort, and learning."
 description: "Nastasia Klevak's personal website -- Stanford Psychology"
 reading_time: true
 words_per_minute: 200
@@ -13,7 +13,7 @@ url: https://nklevak.github.io
 # Jekyll
 permalink: /:title/
 markdown: kramdown
-highlighter: rouge
+highlighter: $purple
 kramdown:
   auto_ids: true
   footnote_nr: 1

@@ -6,7 +6,7 @@ date: 2025-07-14
 comments: false
 ---
 
-I am a second year graduate student in the neuroscience area of the [Stanford Psychology](https://psychology.stanford.edu/) department; advised by Russ Poldrack in the [Poldrack Lab](https://www.poldracklab.org/). 
+I am a second year PhD student in the neuroscience area of the [Stanford Psychology](https://psychology.stanford.edu/) department; advised by Russ Poldrack in the [Poldrack Lab](https://www.poldracklab.org/). 
 
 I'm interested in the many factors that impact our learning and focus over time, and am currently working on projects related to cognitive fatigue and effort, task switching, and learning. 
 

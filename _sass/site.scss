@@ -259,6 +259,7 @@ header .entry-meta {
   margin-top: 1em;
   margin-bottom: 1em;
   font-weight: normal;
+  font-size: 1.1em;
 }
 .content {
     padding-bottom: 0 !important;
@@ -267,4 +268,12 @@ header .entry-meta {
 .wrapper {
     padding-bottom: 1em !important;
     margin-bottom: 0 !important;
+}
+::selection {
+  background: $purple;
+  color: $white;
+}
+::-moz-selection {
+  background: $purple;
+  color: $white;
 }
