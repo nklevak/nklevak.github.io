@@ -51,9 +51,13 @@ body {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(255,255,255,0.5); // white overlay, 0.5 = 50% opacity
+  background: rgba(255,255,255,0.1);
   z-index: 0;
   pointer-events: none;
+}
+body.page-about .header::before {
+  background: none !important;
+  content: none !important;
 }
 .flex {
     display: -webkit-box;
@@ -84,13 +88,13 @@ body {
     padding-left: 30px;
     @include center-block();
     // background: linear-gradient(to right,rgb(128, 110, 142),white);	
-		background-color: $white;
+	background-color: $white;
     color: $color_shark;
     z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 4.1%;
+    border-radius: 0;
     box-shadow: 0 0 10px 0 rgba($color_shark, 0.3);
     @include transition(0.5s);
     @media #{$small} {
@@ -119,8 +123,8 @@ body {
 }
 .wrapper {
     width: 75%;
-    max-width: 850px;
-    margin: 4rem auto;
+    max-width: 900px;
+    margin: 8rem auto;
     background: $white;
     color: $color_tuatara;
     padding: 2em;
@@ -132,6 +136,7 @@ body {
         padding: 2em 0;
         box-shadow: none;
     }
+    font-size: 1em;
 }
 #disqus_thread {
     width: 75%;

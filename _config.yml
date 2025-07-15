@@ -1,10 +1,10 @@
 # Site
 title: Nastasia Klevak
-bio: "Psychology graduate student @ Stanford Psychology with a focus on cognitive fatigue, effort, and learning."
+bio: "Graduate student @ Stanford Psychology with a focus on cognitive fatigue, effort, and learning."
 description: "Nastasia Klevak's personal website -- Stanford Psychology"
 reading_time: true
 words_per_minute: 200
-logo: "assets/img/headshot.png"
+logo: "assets/img/headshot_4.png"
 background: "assets/img/abstract-bluish-paint-background-wallpaper.jpg"
 tiled_bg: false # Set this true if you want to tile your background image, otherwise it will be covered
 locale: en_US
