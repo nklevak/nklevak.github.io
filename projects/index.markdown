@@ -16,7 +16,7 @@ permalink: /projects/
 </details>
 
 
-
+<br>
 ### Previous work
 <details>
   <summary><span style="font-size:0.7em;"></span> <em>Understanding and Simulating Language Conventions in Emerging Sign Language Communities</em></summary>

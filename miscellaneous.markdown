@@ -14,6 +14,6 @@ The Year of Magical Thinking by Joan Didion<br>
 Good Friends: Bonds That Change Us and the World by Priya Vulchi<br>
 Conversations With Friends by Sally Rooney<br>
 Homegoing by Yaa Gyasi
-
+<br>
 ### Contact me
 Feel free to contact me at <a href="mailto:nklevak@stanford.edu">nklevak@stanford.edu</a> with any questions :)
