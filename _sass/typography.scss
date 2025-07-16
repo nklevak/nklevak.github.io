@@ -214,6 +214,23 @@ details > *:not(summary) {
   font-size: 0.9em;
 }
 
+summary em {
+  letter-spacing: 0;
+  font-style: normal;
+}
+
+details summary {
+  list-style: none;
+}
+details summary::-webkit-details-marker {
+  display: none;
+}
+details[open] summary .arrow {
+  transform: rotate(90deg);
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
 .resources-content {
   font-size: 0.95em;
 }
