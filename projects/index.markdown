@@ -7,7 +7,7 @@ permalink: /projects/
 ### Ongoing Projects
 <details>
   <summary><span class="arrow">&#9654;</span> <em style="font-size:0.9em;">How does fatigue relate to effort? And how does task switching influence this?</em></summary>
-  <p style="font-size:0.85em;">The overarching goal of this project is to understand how cognitive fatigue relates to effort, and how switching between tasks may alter that relationship. So far, I have designed an online behavioral task to analyze how self-selected rest times change depending on performance levels and task switches. Currently, I am developing a computational model based on this data to better understand the impact of task switches on the rejuvenating aspects of rest.</p>
+  <p style="font-size:0.85em;">The overarching goal of this project is to understand how cognitive fatigue relates to effort, and how switching between tasks may impact that relationship. So far, I have designed an online behavioral task to analyze how self-selected rest times (as a measure of fatigue) change depending on performance levels and task switches; results suggest that [switching tasks when performing poorly may be beneficial to performance](https://docs.google.com/presentation/d/16h2AdEBM4x2YbOiU8T8Abo2U5t-0jk3ZktpI3WqEPaI/edit?slide=id.g3771e4b27d1_0_22#slide=id.g3771e4b27d1_0_22). Currently, I am developing a computational model based on this data to better understand the impact of task switches on the rejuvenating aspects of rest.</p>
 </details>
 <details>
   <summary><span class="arrow">&#9654;</span> <em style="font-size:0.9em;">How are learning effects reflected in the brain?</em></summary>
@@ -19,7 +19,7 @@ permalink: /projects/
 ### Previous work
 <details>
   <summary><span class="arrow">&#9654;</span> <em style="font-size:0.9em;">Simulating language conventions in emerging sign language communities</em></summary>
-  <p style="font-size:0.85em;">Advised by Tom Griffiths as well as Bill Thompson and Robert Hawkins, this project was the result of a semester-long independent work research project at Princeton. We utilized, coded, and adapted multiple versions of a Hierarchical Bayesian Model to simulate language emergence in various population sizes. By testing models that accounted for partner-specific memory, this project then identified which model best matched with qualitative data about how emerging sign languages develop.</p>
+  <p style="font-size:0.85em;">Advised by Tom Griffiths as well as Bill Thompson and Robert Hawkins, this project was the result of a semester-long independent work research project at Princeton. We utilized, coded, and adapted multiple versions of a Hierarchical Bayesian Model to simulate language emergence in various population sizes.</p>
 </details>
 <details>
   <summary><span class="arrow">&#9654;</span> <em style="font-size:0.9em;">The efficacy of CLIP’s object recognition on photos taken by the Visually Impaired</em></summary>
