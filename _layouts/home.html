@@ -13,6 +13,7 @@ layout: compress
 </head>
 
 <body>
+    {% include page-nav.html %}
     <!-- Header -->
     <header class="header flex" role="banner">
         <div class="container animated fadeIn">
@@ -22,27 +23,12 @@ layout: compress
                 </a>
                 <h3 class="title">
                     <a class="zoombtn" href="{{ site.url }}">
-                        <p style="font-size:2.5rem;font-weight:375">{{ site.title }}</p>
+                        <p class="site-name">{{ site.title }}</p>
                     </a>
                 </h3>
                 <hr class="hr-line">
-                <p class="bio"><a href="/about/" class="bio-link">{{ site.bio }}</a></p>
+                <p class="bio"><a href="{{ site.url }}/about/" class="bio-link">Hi! I'm a {{ site.bio }}</a></p>
                 {% include social-links.html %}
-                <hr class="hr-line">
-                <h3 class="title">
-                    <a class="btn zoombtn" href="{{ site.url }}/about">
-                        About
-                    </a>
-                    <a class="btn zoombtn" href="/projects/">
-                        Projects
-                    </a>
-                    <a class="btn zoombtn" href="/resources/">
-                        Resources
-                    </a>
-                    <a class="btn zoombtn" href="/misc/">
-                        Misc
-                    </a>
-                </h3>
             </div>
         </div>
     </header>

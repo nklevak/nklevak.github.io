@@ -1,14 +1,16 @@
 # Site
 title: Nastasia Klevak
-bio: "Hi! I am a PhD student @ Stanford Psychology with a focus on cognitive fatigue, effort, and learning."
-description: "Nastasia Klevak's personal website -- Stanford Psychology"
+bio: "computational cognitive neuroscientist and 4th-year PhD candidate at Stanford. I use behavioral experiments, neural data analyses, machine learning, and computational models to understand how cognitive effort and fatigue shape learning."
+description: "Nastasia Klevak: Stanford PhD candidate in Psychology (Cognitive Neuroscience) studying cognitive fatigue, effort, and learning with fMRI and computational modeling. Interested in brain-computer interfaces."
+# CV: drop your PDF at this path and the CV buttons appear automatically
+cv: /assets/Klevak_CV_2026-10-26c.pdf
 reading_time: true
 words_per_minute: 200
-logo: "assets/img/headshot_4.png"
-background: "assets/img/abstract-bluish-paint-background-wallpaper.jpg"
+logo: "assets/img/headshot_4-optimized.png"
+background: "assets/img/background-optimized.jpg"
 tiled_bg: false # Set this true if you want to tile your background image, otherwise it will be covered
 locale: en_US
-url: https://nklevak.github.io
+url: https://www.nastasiaklevak.com
 
 # Jekyll
 permalink: /:title/
@@ -90,4 +92,6 @@ exclude:
     CNAME,
     LICENSE,
     Rakefile,
+    _posts/2024-02-11-welcome-to-jekyll.markdown,
+    _posts/2024-02-11-readability-feature-post.markdown,
   ]

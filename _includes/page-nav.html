@@ -1,0 +1,11 @@
+{% comment %}Shared nav bar, fixed at the top of every page.{% endcomment %}
+<div class="site-nav-bar">
+    <nav class="page-nav title">
+        <a class="btn zoombtn{% if page.layout == 'home' %} btn-current{% endif %}" href="{{ site.url }}/">Home</a>
+        <a class="btn zoombtn{% if page.url == '/about/' %} btn-current{% endif %}" href="{{ site.url }}/about/">About</a>
+        <a class="btn zoombtn{% if page.url == '/projects/' %} btn-current{% endif %}" href="{{ site.url }}/projects/">Projects</a>
+        <a class="btn zoombtn{% if page.url == '/resources/' %} btn-current{% endif %}" href="{{ site.url }}/resources/">Resources</a>
+        <a class="btn zoombtn{% if page.url == '/misc/' %} btn-current{% endif %}" href="{{ site.url }}/misc/">Misc</a>
+        {% include cv-button.html %}
+    </nav>
+</div>

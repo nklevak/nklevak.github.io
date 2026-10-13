@@ -1,0 +1,4 @@
+{% comment %}Shows a CV button only once the PDF at site.cv exists in the repo.
+No "zoombtn" class: it opens in a new tab, so the current page must not fade out.{% endcomment %}
+{% assign cv_file = site.static_files | where: "path", site.cv | first %}
+{% if cv_file %}<a class="btn" href="{{ site.cv }}" target="_blank" rel="noopener noreferrer">CV</a>{% endif %}

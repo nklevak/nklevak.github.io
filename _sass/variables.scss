@@ -29,7 +29,11 @@ $info		         : #308cbc;
 //fonts
 $font1               : Fira Sans,sans-serif;
 $font2               : Inconsolata;
-$alt-font            : serif;
+$alt-font            : $font1; // was serif; one font family site-wide
+// font weights: only use weights Fira Sans actually ships with
+$weight-regular      : 400;
+$weight-medium       : 500;
+$weight-bold         : 700;
 $doc-font-size       : 16;
 $doc-line-height     : 26;
 

@@ -14,10 +14,19 @@
     }
 }
 .social-btn {
-    padding: 6.46px;
+    // fixed, equal width and height so every icon sits in a true circle
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.9em;
+    height: 1.9em;
+    padding: 0;
     margin: 6.46px;
-    border-radius: 100%;
-    
+    border-radius: 50%;
+    box-sizing: border-box;
+    line-height: 1;
+    vertical-align: middle;
+
     border: 0.1px solid rgba(0, 0, 0, 0.208);
     opacity: 0.88;
     @extend %btnextend;
@@ -86,7 +95,7 @@
 .title .btn {
     margin: 10px;
     @include font-rem(17);
-    font-weight: 390;
+    font-weight: $weight-medium;
 }
 .post-list {
     .btn {
@@ -98,7 +107,7 @@
     background: none;
     padding: 6px 10px;
     font-size: 1.1em;
-    font-weight: 600;
+    font-weight: $weight-medium;
     margin: 0;
     position: relative;
   }
@@ -107,7 +116,7 @@
     content: "|";
     color: $purple; 
     margin: 0 1em;
-    font-weight: 400;
+    font-weight: $weight-regular;
     font-size: 1.1em;
     position: absolute;
     right: -1.7em;
@@ -286,7 +295,7 @@ kbd {
 // reading time
 .reading-time {
     text-align: center;
-    font-weight: 300;
+    font-weight: $weight-regular;
     margin-bottom: 10px;
 }
 
@@ -304,7 +313,7 @@ kbd {
   color: #fff !important;
   border: none !important;
   font-size: 1.2em;
-  font-weight: 450;
+  font-weight: $weight-medium;
 }
 .btn-home:hover, .btn-home:active {
   background: darken($purple, 10%) !important;

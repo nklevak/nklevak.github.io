@@ -6,6 +6,11 @@ $(function() {
 });
 // Need this to show animation when go back in browser
 window.onunload = function() {};
+// If a page is restored from the back/forward cache (or a link opened in a
+// new tab), make sure it isn't left faded out / blank.
+window.addEventListener('pageshow', function() {
+  $(".container, .wrapper").removeClass("fadeOut").addClass("fadeIn");
+});
 
 // Add lightbox class to all image links
 $("a[href$='.jpg'],a[href$='.jpeg'],a[href$='.JPG'],a[href$='.png'],a[href$='.gif']").addClass("image-popup");
