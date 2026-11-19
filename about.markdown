@@ -17,8 +17,7 @@ Outside of the lab, I care about education and mental health. I also speak Russi
 <div class="highlights" markdown="0">
   <h3>Recent highlights</h3>
   <ul>
-    <li><strong>CCN 2026 spotlight:</strong> my first-author extended abstract, <em>"Self-paced rest decisions: stable but ineffective for recovery."</em></li>
+    <li>My first-author CCN extended abstract was chosen as a Spotlight paper, <em>"Self-paced rest decisions: stable but ineffective for recovery."</em></li>
     <li><strong>First-author paper in prep:</strong> <em>"Task-Switching Resets Latent Performance States During Cognitive Effort,"</em> with Joshua Buckholtz and Russ Poldrack, building on my CCN 2025 and 2026 work.</li>
-    <li><strong>Head TA, Psych 10/Stats 60:</strong> I lead a 13-person teaching team for a 150-student intro statistics course (Fall 2026).</li>
   </ul>
 </div>

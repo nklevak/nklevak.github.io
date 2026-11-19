@@ -12,7 +12,7 @@ layout: compress
     {% include head.html %}
 </head>
 
-<body class="page-about">
+<body class="page-about blob-page{% if page.url == '/about/' %} blob-wide{% endif %}">
     {% include page-nav.html %}
     <!-- Header -->
     <header class="header flex" role="banner">
