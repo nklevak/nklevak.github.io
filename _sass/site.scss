@@ -440,6 +440,12 @@ body.panel-page .wrapper {
   }
 }
 body.panel-page .header { overflow: hidden; }
+// Hide scrollbars everywhere (content still scrolls with trackpad / mouse wheel / touch)
+html, body, .wrapper, .container {
+  scrollbar-width: none;          // Firefox
+  -ms-overflow-style: none;       // old Edge
+  &::-webkit-scrollbar { display: none; width: 0; height: 0; }  // Chrome, Safari
+}
 @media #{$small} { body.panel-page .header { overflow: visible; height: auto; } }
 @media (prefers-reduced-motion: reduce) {
   .header .container { animation: none; }
