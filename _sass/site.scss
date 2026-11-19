@@ -337,6 +337,35 @@ details[open] summary em {
   ul { margin: 0; padding-left: 1.1em; }
   li { font-size: 0.88em; line-height: 1.45; margin-bottom: 0.35em; }
 }
+// ---- Blob-shaped white backgrounds ----
+// Homepage card: a true organic blob that slowly morphs
+@keyframes blob-morph {
+  0%   { border-radius: 64% 36% 58% 42% / 42% 56% 44% 58%; }
+  33%  { border-radius: 40% 60% 38% 62% / 58% 38% 62% 42%; }
+  66%  { border-radius: 58% 42% 66% 34% / 36% 62% 38% 64%; }
+  100% { border-radius: 64% 36% 58% 42% / 42% 56% 44% 58%; }
+}
+.header .container {
+  border-radius: 64% 36% 58% 42% / 42% 56% 44% 58%;
+  padding: 3.5em 5em;
+  max-height: none;
+  overflow: visible;
+  background-color: rgba(255, 255, 255, 0.72);
+  animation: blob-morph 18s ease-in-out infinite;
+  @media #{$small} {
+    padding: 2.5em 2em;
+    border-radius: 38% 62% 50% 50% / 30% 30% 70% 70%;
+  }
+}
+// Text pages: same organic feel, but gentle so long text isn't clipped
+.wrapper {
+  border-radius: 3.5em 5em 4em 6em / 4em 3em 5em 3.5em;
+  padding: 2.5em 2.75em;
+}
+@media (prefers-reduced-motion: reduce) {
+  .header .container { animation: none; }
+}
+
 // Fixed nav bar: same position on every page
 .site-nav-bar {
   position: fixed;
