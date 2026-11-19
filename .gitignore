@@ -2,4 +2,5 @@ _site
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
-vendor
+# only ignore the top-level bundler vendor folder, NOT _sass/vendor (site styles live there)
+/vendor
