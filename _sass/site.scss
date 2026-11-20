@@ -351,7 +351,7 @@ details[open] summary em {
   max-height: none;
   overflow: visible;
   background-color: rgba(255, 255, 255, 0.72);
-  animation: blob-grow 0.6s cubic-bezier(.2,.8,.3,1.05) both, blob-morph 18s ease-in-out 0.6s infinite;
+  animation: blob-morph 18s ease-in-out infinite;
   @media #{$small} {
     padding: 2.5em 2em;
     border-radius: 38% 62% 50% 50% / 30% 30% 70% 70%;
@@ -447,45 +447,28 @@ html, body, .wrapper, .container {
   &::-webkit-scrollbar { display: none; width: 0; height: 0; }  // Chrome, Safari
 }
 @media #{$small} { body.panel-page .header { overflow: visible; height: auto; } }
-// ---- Page transitions: shrink into a blob, grow out of a blob ----
-$blob-shape: 50% 44% 56% 48% / 56% 50% 46% 52%;
-@keyframes blob-grow {          // homepage blob grows in
-  0%   { transform: scale(0.25); opacity: 0; }
-  35%  { opacity: 1; }
-  100% { transform: scale(1); opacity: 1; }
+// ---- Page transitions ----
+// The shrink/grow animation is generated randomly in assets/js/scripts.js.
+// Here we only hide the panel until that script starts it, so it doesn't
+// flash at full size first. If the script never runs, the reveal-fallback
+// shows the page anyway after a moment.
+@keyframes reveal-fallback { to { opacity: 1; } }
+html.js body.panel-page .wrapper:not(.blob-in),
+html.js .header .container:not(.blob-in) {
+  opacity: 0;
+  animation: reveal-fallback 0s linear 1.2s forwards;
 }
-@keyframes panel-expand {       // text-page panel grows out of a blob
-  0%   { transform: scale(0.25); border-radius: $blob-shape; opacity: 0; }
-  30%  { opacity: 1; }
-  100% { transform: scale(1); border-radius: 2.5rem; opacity: 1; }
+html.js .header .container:not(.blob-in) {
+  animation: reveal-fallback 0s linear 1.2s forwards, blob-morph 18s ease-in-out infinite;
 }
-@keyframes panel-contract {     // panel shrinks back into a blob before leaving
-  0%   { transform: scale(1); border-radius: 2.5rem; opacity: 1; }
-  100% { transform: scale(0.25); border-radius: $blob-shape; opacity: 0; }
-}
-@keyframes content-in { from { opacity: 0; } to { opacity: 1; } }
-
-body.panel-page .wrapper {
-  animation: panel-expand 0.6s cubic-bezier(.2,.8,.3,1.05) both;
-  .content { animation: content-in 0.3s ease-out 0.35s both; }
-}
-body.panel-page .wrapper.panel-leaving {
-  animation: panel-contract 0.32s ease-in forwards;
-  .content { animation: none; opacity: 0; transition: opacity 0.1s; }
-}
-@keyframes blob-shrink {        // homepage blob shrinks before leaving
-  from { transform: scale(1); opacity: 1; }
-  to   { transform: scale(0.25); opacity: 0; }
-}
-.header .container.blob-leaving {
-  animation: blob-shrink 0.32s ease-in forwards;
-}
+body.panel-page .wrapper, .header .container { will-change: transform; }
 
 @media (prefers-reduced-motion: reduce) {
-  .header .container,
-  body.panel-page .wrapper,
-  body.panel-page .wrapper .content { animation: none !important; }
+  html.js body.panel-page .wrapper:not(.blob-in),
+  html.js .header .container:not(.blob-in) { opacity: 1; }
+  .header .container { animation: none !important; }
 }
+
 
 
 // Fixed nav bar: same position on every page
