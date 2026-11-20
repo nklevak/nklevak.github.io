@@ -9,7 +9,7 @@ window.onunload = function() {};
 // If a page is restored from the back/forward cache (or a link opened in a
 // new tab), make sure it isn't left faded out / blank.
 window.addEventListener('pageshow', function() {
-  $(".container, .wrapper").removeClass("fadeOut").addClass("fadeIn");
+  $(".container, .wrapper").removeClass("fadeOut panel-leaving blob-leaving");
 });
 
 // Add lightbox class to all image links
@@ -22,16 +22,19 @@ $(function() {
 
 // All others
 $(document).ready(function() {
-    // zoom in/zoom out animations
-    if ($(".container").hasClass('fadeOut')) {
-        $(".container").removeClass("fadeOut").addClass("fadeIn");
-    }
-    if ($(".wrapper").hasClass('fadeOut')) {
-        $(".wrapper").removeClass("fadeOut").addClass("fadeIn");
-    }
-    $(".zoombtn").click(function() {
-        $(".container").removeClass("fadeIn").addClass("fadeOut");
-        $(".wrapper").removeClass("fadeIn").addClass("fadeOut");
+    // Blob transition: when you click a nav link, the panel/blob shrinks back
+    // into a blob, then the next page's panel grows out of a blob (see site.scss).
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    $(document).on('click', 'a.zoombtn', function(e) {
+        var href = this.href;
+        // let the browser handle new tabs, modifier-clicks, and same-page links normally
+        if (!href || this.target === '_blank' || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+        if (href === window.location.href) { e.preventDefault(); return; }
+        if (reduceMotion) return;
+        e.preventDefault();
+        $(".wrapper").addClass("panel-leaving");
+        $(".container").addClass("blob-leaving");
+        setTimeout(function() { window.location.href = href; }, 320);
     });
     // go up button
     $.goup({
