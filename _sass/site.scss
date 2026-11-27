@@ -253,7 +253,7 @@ header .entry-meta {
   margin-top: 1em;
   margin-bottom: 1em;
   font-weight: normal;
-  font-size: 1.1em;
+  font-size: 1.02em;
 }
 .content {
     padding-bottom: 0 !important;
@@ -347,7 +347,7 @@ details[open] summary em {
 }
 .header .container {
   border-radius: 64% 36% 58% 42% / 42% 56% 44% 58%;
-  padding: 3.5em 5em;
+  padding: 2.75em 4em;
   max-height: none;
   overflow: visible;
   background-color: rgba(255, 255, 255, 0.72);
@@ -404,14 +404,14 @@ details.project-card {
 body.panel-page .wrapper {
   // pinned to the screen: same size + position on every page
   position: fixed;
-  top: 3.75rem;           // just below the top nav
-  bottom: 1.5rem;
-  left: 1.5rem;
-  right: 1.5rem;
+  top: 5rem;              // clear space below the top nav
+  bottom: 2.5rem;
+  left: 2rem;
+  right: 2rem;
   margin: 0 auto;
   box-sizing: border-box;
   width: auto;
-  max-width: 960px;
+  max-width: 880px;
   height: auto;
   max-height: none;
   padding: 2.25em 3.5em;
@@ -423,7 +423,7 @@ body.panel-page .wrapper {
     padding: 0;
     max-width: 51rem;
     margin: 0 auto !important;
-    font-size: 1.07rem;   // slightly larger body text on all panel pages
+    font-size: 1rem;      // panel body text
     line-height: 1.45;
     p { line-height: 1.45; }
   }
@@ -508,7 +508,7 @@ body.panel-page .wrapper { view-transition-name: panel; }
 
 .title > a > p.site-name {
   font-family: $font-heading;
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   font-weight: $weight-regular;
   letter-spacing: 0.02em;
 }
@@ -540,12 +540,10 @@ strong, b { font-weight: $weight-bold; }
 .sidebar-link {
   position: relative;
   padding: 0.25rem 0.1rem;
-  color: $white;
   text-decoration: none;
+  &, &:link, &:visited { color: $purple; }   // same blue as the page titles (beats the global link colors)
   font-weight: $weight-regular;
   letter-spacing: 0.01em;
-  // soft shadow keeps white text readable over the light parts of the background
-  text-shadow: 0 1px 3px rgba(20, 40, 80, 0.45), 0 0 10px rgba(20, 40, 80, 0.25);
   // underline that grows on hover / stays on the current page
   &::after {
     content: "";
@@ -554,20 +552,16 @@ strong, b { font-weight: $weight-bold; }
     height: 2px;
     border-radius: 2px;
     background: $white;
-    box-shadow: 0 1px 3px rgba(20, 40, 80, 0.35);
+    box-shadow: 0 1px 3px rgba(20, 40, 80, 0.3);
     transform: scaleX(0);
     transition: transform 0.2s ease;
   }
-  // highlighted (hover or current page): blue text + blue underline
-  &:hover, &.btn-current {
-    color: $purple;
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.9), 0 0 2px rgba(255, 255, 255, 0.9);
+  // highlighted (hover or current page): white text + white underline
+  &:hover, &.btn-current, &.btn-current:link, &.btn-current:visited {
+    color: $white;
+    text-shadow: 0 1px 3px rgba(20, 40, 80, 0.45), 0 0 10px rgba(20, 40, 80, 0.25);
   }
-  &:hover::after, &.btn-current::after {
-    transform: scaleX(1);
-    background: $purple;
-    box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
-  }
+  &:hover::after, &.btn-current::after { transform: scaleX(1); }
 }
 .sidebar-link.btn-current { font-weight: $weight-medium; }
 .header { padding-top: 3.25rem; padding-left: 0; box-sizing: border-box; }
