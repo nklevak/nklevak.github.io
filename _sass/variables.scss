@@ -27,8 +27,8 @@ $danger				 : #C64537;
 $info		         : #308cbc;
 
 //fonts
-$font1               : Georgia, "Times New Roman", serif;   // body text
-$font-heading        : "Ranade", Georgia, serif;             // headings + name (loaded from Fontshare in head.html)
+$font1               : "Ranade", "Helvetica Neue", Arial, sans-serif;  // body text, nav, everything else (loaded from Fontshare in head.html)
+$font-heading        : Georgia, "Times New Roman", serif;               // headings + name
 $font2               : Inconsolata;
 $alt-font            : $font1; // was serif; one font family site-wide
 // font weights used site-wide (Ranade ships 400/500/700; Georgia renders 500 as 400)
