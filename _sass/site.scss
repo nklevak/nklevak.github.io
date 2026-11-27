@@ -542,8 +542,10 @@ strong, b { font-weight: $weight-bold; }
   padding: 0.25rem 0.1rem;
   text-decoration: none;
   &, &:link, &:visited { color: $purple; }   // same blue as the page titles (beats the global link colors)
-  font-weight: $weight-regular;
+  font-family: $font-heading;      // Georgia, like the headings
+  font-weight: $weight-bold;
   letter-spacing: 0.01em;
+  text-shadow: none;               // shadow only when highlighted (below)
   // underline that grows on hover / stays on the current page
   &::after {
     content: "";
@@ -563,7 +565,6 @@ strong, b { font-weight: $weight-bold; }
   }
   &:hover::after, &.btn-current::after { transform: scaleX(1); }
 }
-.sidebar-link.btn-current { font-weight: $weight-medium; }
 .header { padding-top: 3.25rem; padding-left: 0; box-sizing: border-box; }
 @media only screen and (max-width: 30em) {
   .site-nav-bar { position: static; padding: 0.75rem 0.5rem 0.25rem; }
