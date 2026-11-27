@@ -1,11 +1,30 @@
-{% comment %}Shared nav bar, fixed at the top of every page.{% endcomment %}
-<div class="site-nav-bar">
-    <nav class="page-nav title">
-        <a class="btn zoombtn{% if page.layout == 'home' %} btn-current{% endif %}" href="{{ site.url }}/">Home</a>
-        <a class="btn zoombtn{% if page.url == '/about/' %} btn-current{% endif %}" href="{{ site.url }}/about/">About</a>
-        <a class="btn zoombtn{% if page.url == '/projects/' %} btn-current{% endif %}" href="{{ site.url }}/projects/">Projects</a>
-        <a class="btn zoombtn{% if page.url == '/publications/' %} btn-current{% endif %}" href="{{ site.url }}/publications/">Publications</a>
-        <a class="btn zoombtn{% if page.url == '/misc/' %} btn-current{% endif %}" href="{{ site.url }}/misc/">Misc</a>
-        {% include cv-button.html %}
+{% comment %}
+Left sidebar, shared by every page: photo + name (hidden on the homepage,
+which already shows them), page links, CV, and social icons.
+On narrow screens it turns into a top bar (see "Sidebar" in _sass/site.scss).
+{% endcomment %}
+{% assign is_home = false %}{% if page.layout == 'home' %}{% assign is_home = true %}{% endif %}
+<aside class="site-nav-bar{% if is_home %} on-home{% endif %}">
+    {% unless is_home %}
+    <a class="sidebar-profile" href="{{ site.url }}/">
+        <img src="{{ site.url }}/{{ site.logo }}" alt="{{ site.title }}" class="sidebar-photo">
+        <span class="sidebar-name">{{ site.title }}</span>
+    </a>
+    {% endunless %}
+    <nav class="page-nav" aria-label="Main">
+        <a class="sidebar-link{% if is_home %} btn-current{% endif %}" href="{{ site.url }}/">Home</a>
+        <a class="sidebar-link{% if page.url == '/about/' %} btn-current{% endif %}" href="{{ site.url }}/about/">About</a>
+        <a class="sidebar-link{% if page.url == '/projects/' %} btn-current{% endif %}" href="{{ site.url }}/projects/">Projects</a>
+        <a class="sidebar-link{% if page.url == '/publications/' %} btn-current{% endif %}" href="{{ site.url }}/publications/">Publications</a>
+        <a class="sidebar-link{% if page.url == '/misc/' %} btn-current{% endif %}" href="{{ site.url }}/misc/">Misc</a>
+        {% assign cv_file = site.static_files | where: "path", site.cv | first %}
+        {% if cv_file %}<a class="sidebar-link sidebar-cv" href="{{ site.cv }}" target="_blank" rel="noopener noreferrer">CV &#8599;</a>{% endif %}
     </nav>
-</div>
+    {% unless is_home %}
+    <div class="sidebar-social">
+        {% if site.linkedin %}<a href="https://www.linkedin.com/in/{{ site.linkedin }}" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>{% endif %}
+        {% if site.google_scholar %}<a href="{{ site.google_scholar }}" target="_blank" rel="noopener noreferrer" title="Google Scholar" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>{% endif %}
+        {% if site.github-url %}<a href="https://github.com/{{ site.github-url }}" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>{% endif %}
+    </div>
+    {% endunless %}
+</aside>
