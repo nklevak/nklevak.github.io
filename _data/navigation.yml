@@ -1,8 +1,8 @@
-# Site navigation links
+# Site navigation links (legacy menu; the visible nav bar is _includes/page-nav.html)
 
 - title: Projects
   url: /projects/
-- title: Resources
-  url: /resources/
+- title: Publications
+  url: /publications/
 - title: Miscellaneous
   url: /misc/
