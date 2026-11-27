@@ -539,31 +539,30 @@ strong, b { font-weight: $weight-bold; }
 }
 .sidebar-link {
   position: relative;
+  z-index: 0;
+  isolation: isolate;              // keeps the highlighter stroke behind the text
   padding: 0.25rem 0.1rem;
   text-decoration: none;
   &, &:link, &:visited { color: $purple; }   // same blue as the page titles (beats the global link colors)
   font-family: $font-heading;      // Georgia, like the headings
   font-weight: $weight-bold;
   letter-spacing: 0.01em;
-  text-shadow: none;               // shadow only when highlighted (below)
-  // underline that grows on hover / stays on the current page
+  text-shadow: none;
+  // white highlighter-marker stroke behind the word: slightly tilted and uneven,
+  // sweeps in left-to-right on hover, stays on for the current page
   &::after {
     content: "";
     position: absolute;
-    left: 0; right: 0; bottom: -0.05rem;
-    height: 2px;
-    border-radius: 2px;
-    background: $white;
-    box-shadow: 0 1px 3px rgba(20, 40, 80, 0.3);
-    transform: scaleX(0);
-    transition: transform 0.2s ease;
+    z-index: -1;
+    left: -0.4rem; right: -0.4rem;
+    top: 22%; bottom: 2%;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 0.3rem 0.7rem 0.4rem 0.8rem / 0.6rem 0.3rem 0.7rem 0.4rem;
+    transform-origin: left center;
+    transform: rotate(-1.5deg) scaleX(0);
+    transition: transform 0.28s cubic-bezier(.4, 0, .2, 1);
   }
-  // highlighted (hover or current page): white text + white underline
-  &:hover, &.btn-current, &.btn-current:link, &.btn-current:visited {
-    color: $white;
-    text-shadow: 0 1px 3px rgba(20, 40, 80, 0.45), 0 0 10px rgba(20, 40, 80, 0.25);
-  }
-  &:hover::after, &.btn-current::after { transform: scaleX(1); }
+  &:hover::after, &.btn-current::after { transform: rotate(-1.5deg) scaleX(1); }
 }
 .header { padding-top: 3.25rem; padding-left: 0; box-sizing: border-box; }
 @media only screen and (max-width: 30em) {
@@ -576,7 +575,7 @@ strong, b { font-weight: $weight-bold; }
   list-style: none;
   padding-left: 0;
   margin: 0.3em 0 1em;
-  li { line-height: 1.5; }
+  li { font-size: 0.95em; line-height: 1.45; }   // match paragraph text size
 }
 .pub-list {
   text-align: left;
