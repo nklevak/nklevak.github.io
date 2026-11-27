@@ -447,29 +447,60 @@ html, body, .wrapper, .container {
   &::-webkit-scrollbar { display: none; width: 0; height: 0; }  // Chrome, Safari
 }
 @media #{$small} { body.panel-page .header { overflow: visible; height: auto; } }
-// ---- Page transitions ----
-// The shrink/grow animation is generated randomly in assets/js/scripts.js.
-// Here we only hide the panel until that script starts it, so it doesn't
-// flash at full size first. If the script never runs, the reveal-fallback
-// shows the page anyway after a moment.
-@keyframes reveal-fallback { to { opacity: 1; } }
-html.js body.panel-page .wrapper:not(.blob-in),
-html.js .header .container:not(.blob-in) {
-  opacity: 0;
-  animation: reveal-fallback 0s linear 1.2s forwards;
+// ---- Page transitions (browser View Transitions) ----
+// The browser keeps the old page on screen, loads the new one, then morphs
+// between them: no blank flash. The homepage blob and the text-page panel
+// share one name ("panel"), so the browser morphs one into the other.
+// Random values (--vt-*) are set fresh on every page load in _includes/head.html.
+// Browsers without support (e.g. Firefox) simply switch pages normally.
+@view-transition { navigation: auto; }
+
+.header .container,
+body.panel-page .wrapper { view-transition-name: panel; }
+.site-nav-bar { view-transition-name: site-nav; }
+
+// Overall timing (randomized a little each time)
+::view-transition-group(panel) {
+  animation-duration: var(--vt-dur, 750ms);
+  animation-timing-function: cubic-bezier(.3, .7, .3, 1);
 }
-html.js .header .container:not(.blob-in) {
-  animation: reveal-fallback 0s linear 1.2s forwards, blob-morph 18s ease-in-out infinite;
+// Mid-transition the surface squishes into a random blob and back
+::view-transition-image-pair(panel) {
+  overflow: hidden;
+  animation: vt-blob var(--vt-dur, 750ms) cubic-bezier(.45, 0, .35, 1) both;
 }
-body.panel-page .wrapper, .header .container { will-change: transform; }
+@keyframes vt-blob {
+  0%   { border-radius: 2.5rem; transform: none; }
+  45%  { border-radius: var(--vt-blob, 50% 45% 55% 50% / 55% 50% 45% 50%);
+         transform: rotate(var(--vt-rot, 0deg)) scale(var(--vt-sx, .9), var(--vt-sy, .92)); }
+  100% { border-radius: 2.5rem; transform: none; }
+}
+// Old text fades out early, new text fades in late, so they don't overlap.
+// Snapshots fill the morphing surface, so the text shrinks/grows with it.
+::view-transition-old(panel),
+::view-transition-new(panel) {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 0;
+  mix-blend-mode: normal;
+}
+::view-transition-old(panel) { animation: vt-out var(--vt-dur, 750ms) ease both; }
+::view-transition-new(panel) { animation: vt-in  var(--vt-dur, 750ms) ease both; }
+@keyframes vt-out { 0% { opacity: 1; } 40%, 100% { opacity: 0; } }
+@keyframes vt-in  { 0%, 40% { opacity: 0; } 100% { opacity: 1; } }
+
+// Nav bar and background stay still
+::view-transition-old(site-nav), ::view-transition-new(site-nav) { animation-duration: 0.2s; }
+::view-transition-old(root), ::view-transition-new(root) { animation: none; }
 
 @media (prefers-reduced-motion: reduce) {
-  html.js body.panel-page .wrapper:not(.blob-in),
-  html.js .header .container:not(.blob-in) { opacity: 1; }
+  ::view-transition-group(*),
+  ::view-transition-image-pair(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) { animation: none !important; }
   .header .container { animation: none !important; }
 }
-
-
 
 // Fixed nav bar: same position on every page
 .site-nav-bar {

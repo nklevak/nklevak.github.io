@@ -46,6 +46,19 @@ remove:'index.html' | strip_slash }}{% endif %}{% endcapture %}
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- CSS -->
 <link rel="stylesheet" href="{{ site.url }}/assets/css/main.css">
+<!-- Random values for the page-transition blob (see "Page transitions" in _sass/site.scss) -->
+<script>
+(function () {
+  function r(a, b) { return a + Math.random() * (b - a); }
+  function p() { return Math.round(r(30, 70)); }
+  var a = p(), b = p(), c = p(), d = p(), s = document.documentElement.style;
+  s.setProperty('--vt-blob', a + '% ' + (100 - a) + '% ' + c + '% ' + (100 - c) + '% / ' + b + '% ' + d + '% ' + (100 - d) + '% ' + (100 - b) + '%');
+  s.setProperty('--vt-rot', r(-6, 6).toFixed(1) + 'deg');
+  s.setProperty('--vt-sx', r(0.84, 0.94).toFixed(3));
+  s.setProperty('--vt-sy', r(0.86, 0.96).toFixed(3));
+  s.setProperty('--vt-dur', Math.round(r(650, 850)) + 'ms');
+})();
+</script>
 <!-- Icons for social links (Font Awesome 6, loaded from CDN) -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.6/css/academicons.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
