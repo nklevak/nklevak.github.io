@@ -555,7 +555,7 @@ strong, b { font-weight: $weight-bold; }
     position: absolute;
     z-index: -1;
     left: -0.4rem; right: -0.4rem;
-    top: 22%; bottom: 2%;
+    top: 6%; bottom: 4%;           // a little taller than the letters
     background: rgba(255, 255, 255, 0.9);
     border-radius: 0.3rem 0.7rem 0.4rem 0.8rem / 0.6rem 0.3rem 0.7rem 0.4rem;
     transform-origin: left center;
