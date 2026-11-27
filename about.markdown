@@ -17,7 +17,7 @@ Outside of the lab, I care about education and mental health. I also speak Russi
 <div class="highlights" markdown="0">
   <h3>Recent highlights</h3>
   <ul>
-    <li>My first-author CCN extended abstract was chosen as a Spotlight paper, <em>"Self-paced rest decisions: stable but ineffective for recovery."</em></li>
+    <li>My first-author CCN 2026 extended abstract was chosen as a Spotlight paper, <em>"Self-paced rest decisions: stable but ineffective for recovery."</em></li>
     <li><strong>First-author paper in prep:</strong> <em>"Task-Switching Resets Latent Performance States During Cognitive Effort,"</em> with Joshua Buckholtz and Russ Poldrack, building on my CCN 2025 and 2026 work.</li>
   </ul>
 </div>
